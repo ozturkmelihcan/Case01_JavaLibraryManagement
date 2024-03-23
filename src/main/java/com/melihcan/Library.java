@@ -25,7 +25,7 @@ public class Library {
         String author = scanner.nextLine();
         System.out.print("Yayın Yılı: ");
         int publicationYear = scanner.nextInt();
-        scanner.nextLine(); // Dummy nextLine() to consume newline character
+        scanner.nextLine();
         System.out.println("kitabın türü : SCIENCE? , HISTORY? , NOVEL ");
         String type = scanner.nextLine().toUpperCase();
         System.out.println("Kitap ekleniyor...");
@@ -39,7 +39,7 @@ public class Library {
                 books.add(bookHistory);
                 break;
             case "NOVEL":
-                Book bookNovel = new BookNovel(ISBN,title,author,publicationYear);
+                Book bookNovel = new Novel(ISBN,title,author,publicationYear);
                 books.add(bookNovel);
                 break;
         }
